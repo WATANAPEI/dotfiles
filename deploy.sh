@@ -11,6 +11,11 @@ done
 
 cd "$DOT"
 
+if [ 'whoami' -eq 'root' ]; then
+    echo "Use normal user"
+    exit
+fi
+
 echo "start setup..."
 link(){
     #if the same file exists and is not symbolic link
@@ -30,6 +35,7 @@ link(){
 link .vim
 link .vimrc
 link .zshrc
+link .gitconfig
 
 echo "finish setup.."
 
