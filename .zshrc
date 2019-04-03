@@ -1,12 +1,45 @@
-# Lines configured by zsh-newuser-install
+#######################################
+## ENV
+export LANG=ja_JP.UTF-8
+
+## path setting
+path=(~/bin(N-/) /usr/local/bin(N-/) ${path})
+
+# enable color settings
+autoload -Uz colors
+colors
+
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
+
+# prompt
+# 1 line
+PROMPT="%{${fg[white]}%}[%n@%m]%{${reset_color}%}"
+
+# keybind; vim
 bindkey -v
-# End of lines configured by zsh-newuser-install
-# The following lines were added by compinstall
 zstyle :compinstall filename '~/.zshrc'
+
+# determine the separator
+autoload -Uz select-word-style
+select-word-style default
+# Use "/" as a separator
+zstyle ':zle:*' word-chars " /=;@:{},|"
+zstyle ':zle:*' word-style unsepecified
+
+# vcs-info
+autoload -Uz vcs_info
+setopt prompt_subst
+zstyle ':vcs_info:git:*' check-for-changes true
+zstyle ':vcs_info:git:*' stagedstr "%F{yellow}!"
+zstyle ':vcs_info:git:*' unstagedstr "%F{red}+"
+zstyle ':vcs_info:*' formats "%F{green}%c%u[%b]%f"
+zstyle ':vcs_info:*' actionformats '[%b|%a]'
+precmd () { vcs_info }
+PROMPT=$PROMPT'${vcs_info_msg_0_}'
 
 autoload -Uz compinit
 compinit
-# End of lines added by compinstall
+# alias
+alias lal='ls -hal | less'
