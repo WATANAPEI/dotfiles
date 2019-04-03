@@ -19,6 +19,8 @@ PROMPT="%{${fg[white]}%}[%n@%m]%{${reset_color}%}"
 
 # keybind; vim
 bindkey -v
+bindkey '^R' history-incremental-search-backward
+
 zstyle :compinstall filename '~/.zshrc'
 
 # determine the separator
