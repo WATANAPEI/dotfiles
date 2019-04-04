@@ -41,7 +41,13 @@ zstyle ':vcs_info:*' actionformats '[%b|%a]'
 precmd () { vcs_info }
 PROMPT=$PROMPT'${vcs_info_msg_0_}'
 
+# default colors
+#export LSCOLORS=exfxcxdxbxegedabagacad
+export LSCOLORS=dxfxcxdxbxexedabagacad
+
 autoload -Uz compinit
 compinit
 # alias
 alias lal='ls -hal | less'
+alias lc='ls -hal --color=auto'
+
