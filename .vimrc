@@ -1,4 +1,55 @@
-" vim-bootstrap 
+" dein configuration 20190404
+" ref: https://sy-base.com/myrobotics/vim/dein/
+if &compatible
+  set nocompatible               " Be iMproved
+endif
+
+" set the dein install directory
+let s:dein_dir = expand('~/.cache/dein')
+let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
+
+" check the installation of dein
+" if not, download and install
+if &runtimepath !~# '/dein.vim'
+    if !isdirectory(s:dein_repo_dir)
+        execute '!git clone https://github.com/Shougo/dein.vim' s:dein_repo_dir
+    endif
+    execute 'set runtimepath^=' . fnamemodify(s:dein_repo_dir, ':p')
+endif
+
+if dein#load_state(s:dein_dir)
+  call dein#begin(s:dein_dir)
+
+  " Let dein manage dein
+  " call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
+
+  " toml file
+  let g:rc_dir = expand('~/.vim/dein') "dein.toml and dein_lazy.toml
+  let s:toml = g:rc_dir . '/dein.toml'
+  " let s:lazy_toml = g:rc_dir . '/dein_lazy.toml' "comment out when you use lazy file
+  "
+  " Add or remove your plugins here like this:
+  "call dein#add('Shougo/neosnippet.vim')
+  "call dein#add('Shougo/neosnippet-snippets')
+
+  " load toml file
+  call dein#load_toml(s:toml, {'lazy': 0})
+  " call dein#load_toml(s:lazy_toml, {'lazy':1}) "comment out when you use lazy file
+  call dein#end()
+  call dein#save_state()
+endif
+
+filetype plugin indent on
+syntax enable
+
+" check plugin installations
+if dein#check_install()
+  call dein#install()
+endif
+
+
+
+" vim-bootstrap
 
 "*****************************************************************************
 "" Vim-PLug core
@@ -534,3 +585,9 @@ set history=200
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
 
+"" NERDTree settings
+nnoremap <silent><C-e> :NERDTreeToggle<CR>
+" auto launch
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+let NERDTreeShowHidden = 1
