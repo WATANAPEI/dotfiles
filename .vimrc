@@ -591,3 +591,24 @@ nnoremap <silent><C-e> :NERDTreeToggle<CR>
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 let NERDTreeShowHidden = 1
+
+"" open directory with active file
+"" ref: practical vim TIP 41
+cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
+
+"" unite.vim and neomru.vim settiongs
+"" refs: https://qiita.com/ykyk1218/items/ab1c89c4eb6a2f90333a
+noremap <C-U><C-F> :Unite -buffer-name=file file<CR> ""file list
+noremap <C-U><C-R> :Unite file_mru<CR> ""recent used file list
+
+au FileType unite nnoremap <silent> <buffer> <expr> <C-i> unite#do_action('split')
+au FileType unite inoremap <silent> <buffer> <expr> <C-i> unite#do_action('split')
+
+"" escape when ESC key typed twice
+au FileType unite nnoremap <silent> <buffer> <ESC><ESC> q
+au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>q
+
+"" not put into yunk when you type 'x'
+"" ref: https://qiita.com/ykyk1218/items/ab1c89c4eb6a2f90333a
+noremap PP "0p
+noremap x "_x

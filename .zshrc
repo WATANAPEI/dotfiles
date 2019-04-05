@@ -51,3 +51,6 @@ compinit
 alias lal='ls -hal | less'
 alias lc='ls -hal --color=auto'
 
+autoload -Uz add-zsh-hook
+autoload -Uz terminfo
+
