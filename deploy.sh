@@ -11,7 +11,7 @@ done
 
 cd "$DOT"
 
-if [ 'whoami' -eq 'root' ]; then
+if [ `whoami` -eq 'root' ]; then
     echo "Use normal user"
     exit
 fi
@@ -36,6 +36,7 @@ link .vim
 link .vimrc
 link .zshrc
 link .gitconfig
+link .tmux.conf
 
 echo "finish setup.."
 
