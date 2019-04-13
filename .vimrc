@@ -586,7 +586,7 @@ cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
 
 "" NERDTree settings
-nnoremap <silent><C-e> :NERDTreeToggle<CR>
+"" nnoremap <silent><C-e> :NERDTreeToggle<CR>
 " auto launch
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
@@ -612,3 +612,9 @@ au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>q
 "" ref: https://qiita.com/ykyk1218/items/ab1c89c4eb6a2f90333a
 noremap PP "0p
 noremap x "_x
+
+inoremap <C-e> <Esc>$a
+inoremap <C-a> <Esc>^i
+noremap <C-e> <Esc>$a
+noremap <C-a> <Esc>^i
+
