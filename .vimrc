@@ -598,8 +598,8 @@ cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 
 "" unite.vim and neomru.vim settiongs
 "" refs: https://qiita.com/ykyk1218/items/ab1c89c4eb6a2f90333a
-noremap <C-U><C-F> :Unite -buffer-name=file file<CR> ""file list
-noremap <C-U><C-R> :Unite file_mru<CR> ""recent used file list
+noremap <C-U><C-F> :Unite -buffer-name=file file<CR> 
+noremap <C-U><C-R> :Unite file_mru<CR> 
 
 au FileType unite nnoremap <silent> <buffer> <expr> <C-i> unite#do_action('split')
 au FileType unite inoremap <silent> <buffer> <expr> <C-i> unite#do_action('split')
