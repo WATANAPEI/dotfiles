@@ -37,6 +37,6 @@ link .vimrc
 link .zshrc
 link .gitconfig
 link .tmux.conf
-
+link .gitignore
 echo "finish setup.."
 
