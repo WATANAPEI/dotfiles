@@ -54,3 +54,5 @@ alias lc='ls -hal --color=auto'
 autoload -Uz add-zsh-hook
 autoload -Uz terminfo
 
+# export nvm settings
+source ~/.nvm/nvm.sh
