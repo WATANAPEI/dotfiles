@@ -9,3 +9,6 @@ repo = 'Shougo/unite.vim'
 
 [[plugins]]
 repo = 'Shougo/neomru.vim'
+
+[[plugins]]
+repo = 'christoomey/vim-tmux-navigator'
