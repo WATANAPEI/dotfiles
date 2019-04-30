@@ -1,5 +1,5 @@
-" dein configuration 20190404
-" ref: https://sy-base.com/myrobotics/vim/dein/
+"dein configuration 20190404
+"ref: https://sy-base.com/myrobotics/vim/dein/
 if &compatible
   set nocompatible               " Be iMproved
 endif
@@ -175,7 +175,7 @@ set shiftwidth=4
 set expandtab
 
 "" Map leader to ,
-let mapleader=','
+let mapleader="\<Space>"
 
 "" Enable hidden buffers
 set hidden
