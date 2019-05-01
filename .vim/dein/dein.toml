@@ -12,3 +12,6 @@ repo = 'Shougo/neomru.vim'
 
 [[plugins]]
 repo = 'christoomey/vim-tmux-navigator'
+
+[[plugins]]
+repo = 'simeji/winresizer'

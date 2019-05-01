@@ -618,3 +618,6 @@ inoremap <C-a> <Esc>^i
 noremap <C-e> <Esc>$a
 noremap <C-a> <Esc>^i
 
+"" winresize settings
+"" map <Space>e to launch resize mode
+let g:winresizer_start_key = '<Leader>e'
