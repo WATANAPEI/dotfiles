@@ -59,3 +59,10 @@ autoload -Uz terminfo
 
 # go env
 export PATH=$PATH:/usr/local/go/bin
+
+# local server env
+export LOCAL_SERVER_ENV='/usr/local/etc'
+for i in "${LOCAL_SERVER_ENV}"/*.sh ; do
+        [ -r $i ] && source $i
+done
+
