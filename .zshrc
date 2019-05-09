@@ -56,7 +56,6 @@ autoload -Uz terminfo
 
 # export nvm settings
 # source ~/.nvm/nvm.sh
-umask 002
 
 # go env
 export PATH=$PATH:/usr/local/go/bin
