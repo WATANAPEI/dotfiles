@@ -66,3 +66,6 @@ for i in "${LOCAL_SERVER_ENV}"/*.sh ; do
         [ -r $i ] && source $i
 done
 
+# VcXsrv setting
+export DISPLAY=localhost:0.0
+
