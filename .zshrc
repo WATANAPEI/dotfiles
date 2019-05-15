@@ -68,4 +68,7 @@ done
 
 # VcXsrv setting
 export DISPLAY=localhost:0.0
+# ruby setting
+export GEM_HOME=~/.gem
+export EDITOR=vim
 
