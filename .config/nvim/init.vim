@@ -175,6 +175,11 @@ let g:lightline = {
   \  'ale': 'ALEGetStatusLine'
   \}
   \ }
+"" default tabspace setting
+set tabstop=4
+set softtabstop=0
+set shiftwidth=4
+set expandtab
 
 "" filetype settings
 autocmd FileType html setlocal expandtab sw=2 ts=2 sts=2
@@ -182,3 +187,65 @@ autocmd FileType javascript setlocal expandtab sw=4 ts=4 sts=4
 autocmd FileType python setlocal expandtab sw=4 ts=4 sts=4
 autocmd FileType ruby setlocal expandtab sw=2 ts=2 sts=2
 autocmd FileType css setlocal expandtab sw=2 ts=2 sts=2
+
+"" LanguageClient-neovim settings
+" Required for operations modifying multiple buffers like rename.
+set hidden
+
+let g:LanguageClient_serverCommands = {
+    \ 'javascript': ['/usr/local/bin/javascript-typescript-stdio'],
+    \ 'javascript.jsx': ['tcp://127.0.0.1:2089'],
+    \ 'python': ['/usr/local/bin/pyls'],
+    \ 'ruby': ['~/.rbenv/shims/solargraph', 'stdio'],
+    \ }
+
+nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
+nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
+
+"" LSP server settings
+"" ref: https://qiita.com/succi0303/items/cd30d0ea40d419d4431c
+"" for ruby
+if executable('solargraph')
+    " gem install solargraph
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'solargraph',
+        \ 'cmd': {server_info->[&shell, &shellcmdflag, 'solargraph stdio']},
+        \ 'initialization_options': {"diagnostics": "true"},
+        \ 'whitelist': ['ruby'],
+        \ })
+endif
+
+"" for golang
+if executable('gopls')
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'gopls',
+        \ 'cmd': {server_info->['gopls', '-mode', 'stdio']},
+        \ 'whitelist': ['go'],
+        \ })
+endif
+
+"" for python
+if executable('pyls')
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'pyls',
+        \ 'cmd': {server_info->['pyls']},
+        \ 'whitelist': ['python'],
+        \ })
+endif
+
+"" for js and ts
+""if executable('typescript-language-server')
+""  au User lsp_setup call lsp#register_server({
+""    \ 'name': 'javascript support using typescript-language-server',
+""    \ 'cmd': {server_info->[&shell, &shellcmdflag, 'typescript-language-server --stdio']},
+""    \ 'root_uri':{server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_file_directory(lsp#utils#get_buffer_path(), 'package.json'))},
+""    \ 'whitelist': ['javascript', 'javascript.jsx'],
+""    \ })
+""endif
+
+" open nvim config file
+nnoremap <F5> :<C-u>vsplit $MYVIMRC<CR>
+" reload nvim config file
+nnoremap <F6> :<C-u>source $MYVIMRC<CR>
+                \ :source $MYGVIMRC<CR>
