@@ -71,4 +71,12 @@ export DISPLAY=localhost:0.0
 # ruby setting
 export GEM_HOME=~/.gem
 export EDITOR=vim
+# nvim deoplete setting
+export NVIM_PYTHON_LOG_FILE=/tmp/log
+export NVIM_PYTHON_LOG_LEVEL=DEBUG
+
+
+
+
+
 

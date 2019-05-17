@@ -4,10 +4,6 @@ DOTFILES_BASENAME="dotfiles"
 DOT="${DOT:-$HOME/$DOTFILES_BASENAME}"
 BACKUP_DIR="$HOME/dotfiles_backup"
 TIME=$(date +%Y%m%d_%H%M%S)
-echo "----DOT ONLY---"
-for f in .??*
-do echo ${f};
-done
 
 cd "$DOT"
 
@@ -38,5 +34,6 @@ link .zshrc
 link .gitconfig
 link .tmux.conf
 link .gitignore
+link .config
 echo "finish setup.."
 

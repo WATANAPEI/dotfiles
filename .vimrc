@@ -621,3 +621,13 @@ noremap <C-a> <Esc>^i
 "" winresize settings
 "" map <Space>e to launch resize mode
 let g:winresizer_start_key = '<Leader>e'
+
+"" move current dir automatically
+set autochdir
+
+"" python3 setting for interpolation
+let g:python3_host_prog = '/usr/bin/python3'
+
+"" Use deoplete.
+""let g:deoplete#enable_at_startup = 1
+
