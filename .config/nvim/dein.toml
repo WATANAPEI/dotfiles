@@ -37,3 +37,9 @@ repo = 'airblade/vim-gitgutter'
 [[plugins]]
 repo = 'autozimu/LanguageClient-neovim'
 build = './install.sh'
+
+[[plugins]]
+repo = 'Shougo/neosnippet.vim'
+
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
