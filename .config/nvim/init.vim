@@ -99,8 +99,8 @@ noremap <leader>q :bp<CR>
 noremap <leader>x :bn<CR>
 noremap <leader>w :bn<CR>
 
-"" Close buffer
-noremap <leader>c :bd<CR>
+"" Close window
+noremap <leader>c :clo<CR>
 
 "" Clean search (highlight)
 nnoremap <silent> <leader><space> :noh<cr>
@@ -246,6 +246,13 @@ endif
 
 " open nvim config file
 nnoremap <F5> :<C-u>vsplit $MYVIMRC<CR>
-" reload nvim config file
-nnoremap <F6> :<C-u>source $MYVIMRC<CR>
-                \ :source $MYGVIMRC<CR>
+
+" shortcut for vimgrep incre & decre
+nnoremap [Q :<C-u>cfirst<CR>
+nnoremap ]Q :<C-u>clast<CR>
+
+noremap <leader>[ :cprevious<CR>
+noremap <leader>] :cnext<CR>
+
+" open new window automatically when vimgrep, grep 
+autocmd QuickFixCmdPost *grep* cwindow
