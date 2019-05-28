@@ -75,6 +75,11 @@ export EDITOR=vim
 export NVIM_PYTHON_LOG_FILE=/tmp/log
 export NVIM_PYTHON_LOG_LEVEL=DEBUG
 
+# alias for docker
+alias dcl='docker container ls'
+alias dcla='docker container ls -a'
+alias dce='docker container exec -it'
+
 
 
 
