@@ -1,6 +1,6 @@
 [user]
 	nane = WATANAPEI
-	email = pei2791150@gmail.com
+	email = info@wpei.dev
 	name = WATANAPEI
 [core]
 	editor = vim
@@ -47,3 +47,4 @@
     dc = diff --cached # diff to staged
     ds = diff --staged # same above
     d1 = diff HEAD~
+    dr = diff master origin/master
