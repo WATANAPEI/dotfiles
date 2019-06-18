@@ -256,3 +256,12 @@ noremap <leader>] :cnext<CR>
 
 " open new window automatically when vimgrep, grep 
 autocmd QuickFixCmdPost *grep* cwindow
+
+" fugitive shortcut
+nmap [figitive] <Nop>
+map <leader>g [figitive]
+nmap <silent> [figitive]s :<C-u>Gstatus<CR>
+nmap <silent> [figitive]d :<C-u>Gdiff<CR>
+nmap <silent> [figitive]b :<C-u>Gblame<CR>
+nmap <silent> [figitive]l :<C-u>Glog<CR>
+
