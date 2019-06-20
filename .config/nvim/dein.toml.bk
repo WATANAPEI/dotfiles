@@ -2,6 +2,9 @@
 repo = 'scrooloose/nerdtree'
 
 [[plugins]]
+repo = 'w0rp/ale'
+
+[[plugins]]
 repo = 'itchyny/lightline.vim'
 
 [[plugins]]
@@ -20,7 +23,13 @@ repo = 'christoomey/vim-tmux-navigator'
 repo = 'simeji/winresizer'
 
 [[plugins]]
+repo = 'Shougo/deoplete.nvim'
+
+[[plugins]]
 repo = 'tpope/vim-endwise'
+
+[[plugins]]
+repo = 'Townk/vim-autoclose'
 
 [[plugins]]
 repo = 'airblade/vim-gitgutter'
@@ -28,6 +37,12 @@ repo = 'airblade/vim-gitgutter'
 [[plugins]]
 repo = 'autozimu/LanguageClient-neovim'
 build = './install.sh'
+
+[[plugins]]
+repo = 'Shougo/neosnippet.vim'
+
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
 
 [[plugins]]
 repo = 'tpope/vim-fugitive'
