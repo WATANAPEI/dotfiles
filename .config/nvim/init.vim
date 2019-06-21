@@ -265,3 +265,6 @@ nmap <silent> [figitive]d :<C-u>Gdiff<CR>
 nmap <silent> [figitive]b :<C-u>Gblame<CR>
 nmap <silent> [figitive]l :<C-u>Glog<CR>
 
+" move corsole during insert mode
+ino <C-l> <Right>
+ino <C-g> <Left>
