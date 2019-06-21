@@ -268,3 +268,6 @@ nmap <silent> [figitive]l :<C-u>Glog<CR>
 " move corsole during insert mode
 ino <C-l> <Right>
 ino <C-g> <Left>
+
+" add fzf settings
+set runtimepath+=~/.fzf

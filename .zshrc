@@ -85,3 +85,5 @@ alias dce='docker container exec -it'
 
 
 
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
