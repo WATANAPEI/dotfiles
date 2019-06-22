@@ -198,6 +198,7 @@ let g:LanguageClient_serverCommands = {
     \ 'python': ['/usr/local/bin/pyls'],
     \ 'ruby': ['~/.gem/bin/solargraph', 'stdio'],
     \ }
+let g:LanguageClient_changeThrottle = 0.1
 
 nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
 nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
@@ -206,34 +207,34 @@ nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
 "" LSP server settings
 "" ref: https://qiita.com/succi0303/items/cd30d0ea40d419d4431c
 "" for ruby
-if executable('solargraph')
-    " gem install solargraph
-    au User lsp_setup call lsp#register_server({
-        \ 'name': 'solargraph',
-        \ 'cmd': {server_info->[&shell, &shellcmdflag, 'solargraph stdio']},
-        \ 'initialization_options': {"diagnostics": "true"},
-        \ 'whitelist': ['ruby'],
-        \ })
-endif
-
+"if executable('solargraph')
+"    " gem install solargraph
+"    au User lsp_setup call lsp#register_server({
+"        \ 'name': 'solargraph',
+"        \ 'cmd': {server_info->[&shell, &shellcmdflag, 'solargraph stdio']},
+"        \ 'initialization_options': {"diagnostics": "true"},
+"        \ 'whitelist': ['ruby'],
+"        \ })
+"endif
+"
 "" for golang
-if executable('gopls')
-    au User lsp_setup call lsp#register_server({
-        \ 'name': 'gopls',
-        \ 'cmd': {server_info->['gopls', '-mode', 'stdio']},
-        \ 'whitelist': ['go'],
-        \ })
-endif
-
+"if executable('gopls')
+"    au User lsp_setup call lsp#register_server({
+"        \ 'name': 'gopls',
+"        \ 'cmd': {server_info->['gopls', '-mode', 'stdio']},
+"        \ 'whitelist': ['go'],
+"        \ })
+"endif
+"
 "" for python
-if executable('pyls')
-    au User lsp_setup call lsp#register_server({
-        \ 'name': 'pyls',
-        \ 'cmd': {server_info->['pyls']},
-        \ 'whitelist': ['python'],
-        \ })
-endif
-
+"if executable('pyls')
+"    au User lsp_setup call lsp#register_server({
+"        \ 'name': 'pyls',
+"        \ 'cmd': {server_info->['pyls']},
+"        \ 'whitelist': ['python'],
+"        \ })
+"endif
+"
 "" for js and ts
 ""if executable('typescript-language-server')
 ""  au User lsp_setup call lsp#register_server({
@@ -274,3 +275,6 @@ set runtimepath+=~/.fzf
 
 " type "jj" means ESC
 inoremap jj <ESC>
+
+" add ruby host prog location
+let g:ruby_host_prog = '~/.gem/bin/neovim-ruby-host'

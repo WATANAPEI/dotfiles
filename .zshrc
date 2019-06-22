@@ -71,6 +71,8 @@ export DISPLAY=localhost:0.0
 # ruby setting
 export GEM_HOME=~/.gem
 export EDITOR=vim
+# add ruby/bin
+export PATH=$PATH:~/.gem/bin
 # nvim deoplete setting
 export NVIM_PYTHON_LOG_FILE=/tmp/log
 export NVIM_PYTHON_LOG_LEVEL=DEBUG
@@ -87,3 +89,4 @@ alias dce='docker container exec -it'
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
