@@ -271,3 +271,6 @@ ino <C-g> <Left>
 
 " add fzf settings
 set runtimepath+=~/.fzf
+
+" type "jj" means ESC
+inoremap jj <ESC>
