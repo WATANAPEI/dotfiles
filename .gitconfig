@@ -3,7 +3,7 @@
 	email = info@wpei.dev
 	name = WATANAPEI
 [core]
-	editor = vim
+	editor = nvim
 [color]
     status = auto
     diff = auto
