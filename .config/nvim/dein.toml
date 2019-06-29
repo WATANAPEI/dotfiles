@@ -43,3 +43,7 @@ repo = 'tpope/vim-fugitive'
 
 [[plugins]]
 repo = 'bronson/vim-trailing-whitespace'
+
+[[plugins]]
+repo = 'altercation/vim-colors-solarized'
+

@@ -164,18 +164,6 @@ let g:deoplete#enable_at_startup = 1
 
 set laststatus=2
 
-"" ale_settings
-let g:lightline = {
-  \'active': {
-  \  'left': [
-  \    ['mode', 'paste'],
-  \    ['readonly', 'filename', 'modified', 'ale'],
-  \  ]
-  \},
-  \'component_function': {
-  \  'ale': 'ALEGetStatusLine'
-  \}
-  \ }
 "" default tabspace setting
 set tabstop=4
 set softtabstop=0
@@ -183,6 +171,10 @@ set shiftwidth=4
 set expandtab
 
 "" filetype settings
+autocmd BufRead,BufNewFile *.ts set filetype=typescript
+autocmd BufRead,BufNewFile *.tsx set filetype=typescript
+autocmd BufRead,BufNewFile *.jsx set filetype=javascript
+autocmd BufRead,BufNewFile *.html.erb set filetype=html
 autocmd FileType html setlocal expandtab sw=2 ts=2 sts=2
 autocmd FileType javascript setlocal expandtab sw=4 ts=4 sts=4
 autocmd FileType python setlocal expandtab sw=4 ts=4 sts=4
@@ -195,6 +187,7 @@ set hidden
 
 let g:LanguageClient_serverCommands = {
     \ 'javascript': ['/usr/local/bin/javascript-typescript-stdio'],
+    \ 'typescript': ['/usr/local/bin/javascript-typescript-stdio'],
     \ 'javascript.jsx': ['tcp://127.0.0.1:2089'],
     \ 'python': ['/usr/local/bin/pyls'],
     \ 'ruby': ['~/.gem/bin/solargraph', 'stdio'],
@@ -279,3 +272,21 @@ inoremap jj <ESC>
 
 " add ruby host prog location
 let g:ruby_host_prog = '~/.gem/bin/neovim-ruby-host'
+
+" syntastic settings
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
+"let g:syntastic_javascript_checkers = ['eslint']
+"let g:syntastic_typescript_checkers = ['eslint']
+
+" solarized settings
+" https://qiita.com/nilllm/items/c16519d7c8db35de7514
+" let g:solarized_termcolors=256
+" syntax enable
+" set background=dark
+" colorscheme solarized
