@@ -176,6 +176,8 @@ let g:lightline = {
   \  'ale': 'ALEGetStatusLine'
   \}
   \ }
+"" disable ale_completion
+let g:ale_completion_enabled=0
 "" default tabspace setting
 set tabstop=4
 set softtabstop=0

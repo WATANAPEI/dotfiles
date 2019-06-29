@@ -50,3 +50,5 @@ repo = 'altercation/vim-colors-solarized'
 [[plugins]]
 repo = 'w0rp/ale'
 
+[[plugins]]
+repo = 'leafgarland/typescript-vim'
