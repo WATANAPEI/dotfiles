@@ -164,6 +164,18 @@ let g:deoplete#enable_at_startup = 1
 
 set laststatus=2
 
+"" ale_settings
+let g:lightline = {
+  \'active': {
+  \  'left': [
+  \    ['mode', 'paste'],
+  \    ['readonly', 'filename', 'modified', 'ale'],
+  \  ]
+  \},
+  \'component_function': {
+  \  'ale': 'ALEGetStatusLine'
+  \}
+  \ }
 "" default tabspace setting
 set tabstop=4
 set softtabstop=0

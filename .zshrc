@@ -82,8 +82,8 @@ alias dcl='docker container ls'
 alias dcla='docker container ls -a'
 alias dce='docker container exec -it'
 
-
-
+# alias for vimdiff
+alias vimdiff='nvim -d '
 
 
 

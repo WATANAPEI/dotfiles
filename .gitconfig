@@ -48,3 +48,10 @@
     ds = diff --staged # same above
     d1 = diff HEAD~
     dr = diff master origin/master
+[diff]
+    tool = nvimdiff
+[difftool]
+    prompt = false
+[difftool "nvimdiff"]
+    cmd = "nvim -d -c \"wincmd l\" -d \"$LOCAL\" \"$REMOTE\""
+
