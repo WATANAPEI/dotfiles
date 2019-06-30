@@ -190,7 +190,8 @@ autocmd BufRead,BufNewFile *.tsx set filetype=typescript
 autocmd BufRead,BufNewFile *.jsx set filetype=javascript
 autocmd BufRead,BufNewFile *.html.erb set filetype=html
 autocmd FileType html setlocal expandtab sw=2 ts=2 sts=2
-autocmd FileType javascript setlocal expandtab sw=4 ts=4 sts=4
+autocmd FileType javascript setlocal expandtab sw=2 ts=2 sts=2
+autocmd FileType typescript setlocal expandtab sw=2 ts=2 sts=2
 autocmd FileType python setlocal expandtab sw=4 ts=4 sts=4
 autocmd FileType ruby setlocal expandtab sw=2 ts=2 sts=2
 autocmd FileType css setlocal expandtab sw=2 ts=2 sts=2
