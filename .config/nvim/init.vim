@@ -204,7 +204,6 @@ let g:LanguageClient_serverCommands = {
     \ 'javascript': ['/usr/local/bin/javascript-typescript-stdio'],
     \ 'typescript': ['/usr/local/bin/javascript-typescript-stdio'],
     \ 'javascript.jsx': ['tcp://127.0.0.1:2089'],
-    \ 'python': ['/usr/local/bin/pyls'],
     \ 'ruby': ['~/.gem/bin/solargraph', 'stdio'],
     \ }
 let g:LanguageClient_changeThrottle = 0.1
@@ -212,47 +211,6 @@ let g:LanguageClient_changeThrottle = 0.1
 nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
 nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
 nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
-
-"" LSP server settings
-"" ref: https://qiita.com/succi0303/items/cd30d0ea40d419d4431c
-"" for ruby
-"if executable('solargraph')
-"    " gem install solargraph
-"    au User lsp_setup call lsp#register_server({
-"        \ 'name': 'solargraph',
-"        \ 'cmd': {server_info->[&shell, &shellcmdflag, 'solargraph stdio']},
-"        \ 'initialization_options': {"diagnostics": "true"},
-"        \ 'whitelist': ['ruby'],
-"        \ })
-"endif
-"
-"" for golang
-"if executable('gopls')
-"    au User lsp_setup call lsp#register_server({
-"        \ 'name': 'gopls',
-"        \ 'cmd': {server_info->['gopls', '-mode', 'stdio']},
-"        \ 'whitelist': ['go'],
-"        \ })
-"endif
-"
-"" for python
-"if executable('pyls')
-"    au User lsp_setup call lsp#register_server({
-"        \ 'name': 'pyls',
-"        \ 'cmd': {server_info->['pyls']},
-"        \ 'whitelist': ['python'],
-"        \ })
-"endif
-"
-"" for js and ts
-""if executable('typescript-language-server')
-""  au User lsp_setup call lsp#register_server({
-""    \ 'name': 'javascript support using typescript-language-server',
-""    \ 'cmd': {server_info->[&shell, &shellcmdflag, 'typescript-language-server --stdio']},
-""    \ 'root_uri':{server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_file_directory(lsp#utils#get_buffer_path(), 'package.json'))},
-""    \ 'whitelist': ['javascript', 'javascript.jsx'],
-""    \ })
-""endif
 
 " open nvim config file
 nnoremap <F5> :<C-u>vsplit $MYVIMRC<CR>
@@ -305,3 +263,8 @@ let g:ruby_host_prog = '~/.gem/bin/neovim-ruby-host'
 " syntax enable
 " set background=dark
 " colorscheme solarized
+
+" set NerdTreeWinSize
+:let g:NERDTreeWinSize=20
+" set command window size
+:set cmdheight=2
