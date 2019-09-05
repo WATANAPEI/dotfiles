@@ -85,6 +85,8 @@ alias dce='docker container exec -it'
 # alias for vimdiff
 alias vimdiff='nvim -d '
 
+# alias for git
+alias gac='git add . && git commit -v'
 
 
 
