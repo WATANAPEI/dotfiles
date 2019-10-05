@@ -269,3 +269,6 @@ let g:ruby_host_prog = '~/.gem/bin/neovim-ruby-host'
 :let g:NERDTreeWinSize=20
 " set command window size
 :set cmdheight=2
+
+" yank shortcut
+vnoremap y : '<,'>y+"
