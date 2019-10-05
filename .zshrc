@@ -87,6 +87,7 @@ alias vimdiff='nvim -d '
 
 # alias for git
 alias gac='git add . && git commit -v'
+alias gp='git push'
 
 # add cbc(original compiler)
 export PATH=$PATH:/usr/local/cbc/bin
