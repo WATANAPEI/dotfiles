@@ -176,6 +176,8 @@ let g:lightline = {
   \  'ale': 'ALEGetStatusLine'
   \}
   \ }
+"" tell ale the c++ compile option
+let g:ale_cpp_gcc_options="-std=c++1z"
 "" disable ale_completion
 let g:ale_completion_enabled=0
 "" default tabspace setting
@@ -272,3 +274,5 @@ let g:ruby_host_prog = '~/.gem/bin/neovim-ruby-host'
 
 " yank shortcut
 vnoremap y : '<,'>y+"
+
+command W : write
