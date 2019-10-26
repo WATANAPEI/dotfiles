@@ -276,3 +276,4 @@ let g:ruby_host_prog = '~/.gem/bin/neovim-ruby-host'
 vnoremap y : '<,'>y+"
 
 command W : write
+command Q : quit
