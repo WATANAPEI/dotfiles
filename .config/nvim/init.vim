@@ -177,7 +177,7 @@ let g:lightline = {
   \}
   \ }
 "" tell ale the c++ compile option
-let g:ale_cpp_gcc_options="-std=c++1z"
+let g:ale_cpp_gcc_options="-std=c++1z -Wall -l /usr/local/include"
 "" disable ale_completion
 let g:ale_completion_enabled=0
 "" default tabspace setting
