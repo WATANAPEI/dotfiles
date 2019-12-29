@@ -94,3 +94,8 @@ export PATH=$PATH:/usr/local/cbc/bin
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+#include current directory into link search path
+export LD_LIBRARY_PATH=.
+
+# launch tmux
+tmux
