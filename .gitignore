@@ -1,3 +1,11 @@
 *.swp
 configstore
-
+dconf
+evolution
+gnome*
+gtk*
+ibus
+nautilus
+pulse
+user-dirs.*
+yelp
