@@ -97,5 +97,9 @@ export PATH=$PATH:/usr/local/cbc/bin
 #include current directory into link search path
 export LD_LIBRARY_PATH=.
 
+#execute mkdir and cd
+function mdc() {
+    mkdir -p "$@" && eval cd "\"\$$#\"";
+}
 # launch tmux
 tmux
