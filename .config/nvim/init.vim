@@ -277,3 +277,6 @@ vnoremap y : '<,'>y+"
 
 command W : write
 command Q : quit
+
+" clipboard share for ubuntu
+set clipboard+=unnamedplus

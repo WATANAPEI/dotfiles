@@ -67,10 +67,13 @@ for i in "${LOCAL_SERVER_ENV}"/*.sh ; do
 done
 
 # VcXsrv setting
-export DISPLAY=localhost:0.0
+# use command only for WSL
+if [[ `uname -a` =~ Linux && `uname -a` =~ Microsoft ]]; then
+    export DISPLAY=localhost:0.0
+fi
 # ruby setting
 export GEM_HOME=~/.gem
-export EDITOR=vim
+# export EDITOR=vim
 # add ruby/bin
 export PATH=$PATH:~/.gem/bin
 # nvim deoplete setting
