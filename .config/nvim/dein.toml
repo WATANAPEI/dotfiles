@@ -29,8 +29,8 @@ repo = 'airblade/vim-gitgutter'
 repo = 'autozimu/LanguageClient-neovim'
 build = 'bash ./install.sh'
 
-[[plugins]]
-repo = 'Shougo/deoplete.nvim'
+# [[plugins]]
+# repo = 'Shougo/deoplete.nvim'
 
 [[plugins]]
 repo = 'Shougo/neosnippet.vim'
