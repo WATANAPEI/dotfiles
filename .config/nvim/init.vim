@@ -69,18 +69,6 @@ syntax on
 set ruler
 set number
 
-"" NERDTree configuration
-let g:NERDTreeChDirMode=2
-let g:NERDTreeIgnore=['\.rbc$', '\~$', '\.pyc$', '\.db$', '\.sqlite$', '__pycache__']
-let g:NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$', '\.bak$', '\~$']
-let g:NERDTreeShowBookmarks=1
-let g:nerdtree_tabs_focus_on_files=1
-let g:NERDTreeMapOpenInTabSilent = '<RightMouse>'
-let g:NERDTreeWinSize = 50
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlite
-nnoremap <silent> <F2> :NERDTreeFind<CR>
-nnoremap <silent> <F3> :NERDTreeToggle<CR>
-
 "*****************************************************************************
 "" Mappings
 "*****************************************************************************
@@ -113,13 +101,6 @@ noremap <leader>h <C-w>h
 set history=200
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
-
-"" NERDTree settings
-"" nnoremap <silent><C-e> :NERDTreeToggle<CR>
-" auto launch
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-let NERDTreeShowHidden = 1
 
 "" open directory with active file
 "" ref: practical vim TIP 41
@@ -164,18 +145,6 @@ let g:deoplete#enable_at_startup = 1
 
 set laststatus=2
 
-"" ale_settings
-let g:lightline = {
-  \'active': {
-  \  'left': [
-  \    ['mode', 'paste'],
-  \    ['readonly', 'filename', 'modified', 'ale'],
-  \  ]
-  \},
-  \'component_function': {
-  \  'ale': 'ALEGetStatusLine'
-  \}
-  \ }
 "" tell ale the c++ compile option
 let g:ale_cpp_gcc_options="-std=c++1z -Wall -l /usr/local/include -I/usr/local/src/date/include/date -I/usr/local/src/curl/include -I/usr/local/src/pngwriter/src -I/usr/local/src/freetype-2.10.1/include -I/usr/local/src/asio-1.12.2/include -I/usr/local/src/pdfwriter"
 "" disable ale_completion
@@ -199,22 +168,6 @@ autocmd FileType python setlocal expandtab sw=4 ts=4 sts=4
 autocmd FileType ruby setlocal expandtab sw=2 ts=2 sts=2
 autocmd FileType css setlocal expandtab sw=2 ts=2 sts=2
 
-"" LanguageClient-neovim settings
-" Required for operations modifying multiple buffers like rename.
-set hidden
-
-let g:LanguageClient_serverCommands = {
-    \ 'javascript': ['/usr/local/bin/javascript-typescript-stdio'],
-    \ 'typescript': ['/usr/local/bin/javascript-typescript-stdio'],
-    \ 'javascript.jsx': ['tcp://127.0.0.1:2089'],
-    \ 'ruby': ['~/.gem/bin/solargraph', 'stdio'],
-    \ }
-let g:LanguageClient_changeThrottle = 0.1
-
-nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
-nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
-nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
-
 " open nvim config file
 nnoremap <F5> :<C-u>vsplit $MYVIMRC<CR>
 
@@ -225,7 +178,7 @@ nnoremap ]Q :<C-u>clast<CR>
 noremap <leader>[ :cprevious<CR>
 noremap <leader>] :cnext<CR>
 
-" open new window automatically when vimgrep, grep 
+" open new window automatically when vimgrep, grep
 autocmd QuickFixCmdPost *grep* cwindow
 
 " fugitive shortcut
@@ -267,8 +220,6 @@ let g:ruby_host_prog = '~/.gem/bin/neovim-ruby-host'
 " set background=dark
 " colorscheme solarized
 
-" set NerdTreeWinSize
-:let g:NERDTreeWinSize=20
 " set command window size
 :set cmdheight=2
 

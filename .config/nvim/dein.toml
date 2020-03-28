@@ -1,8 +1,14 @@
 [[plugins]]
 repo = 'scrooloose/nerdtree'
+hook_add = '''
+source ~/dotfiles/.config/nvim/plugins/NERDTree.rc.vim
+'''
 
 [[plugins]]
 repo = 'itchyny/lightline.vim'
+hook_add = '''
+source ~/dotfiles/.config/nvim/plugins/lightline.rc.vim
+'''
 
 [[plugins]]
 repo = 'Shougo/dein.vim'
@@ -28,6 +34,9 @@ repo = 'airblade/vim-gitgutter'
 [[plugins]]
 repo = 'autozimu/LanguageClient-neovim'
 build = 'bash ./install.sh'
+hook_add = '''
+source ~/dotfiles/.config/nvim/plugins/LanguageClient-neovim.rc.vim
+'''
 
 # [[plugins]]
 # repo = 'Shougo/deoplete.nvim'
