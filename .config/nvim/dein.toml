@@ -38,8 +38,8 @@ hook_add = '''
 source ~/dotfiles/.config/nvim/plugins/LanguageClient-neovim.rc.vim
 '''
 
-# [[plugins]]
-# repo = 'Shougo/deoplete.nvim'
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
 
 [[plugins]]
 repo = 'Shougo/neosnippet.vim'
