@@ -104,5 +104,9 @@ export LD_LIBRARY_PATH=.
 function mdc() {
     mkdir -p "$@" && eval cd "\"\$$#\"";
 }
+
+# find latest neovim
+[ -f ~/downloads/nvim.appimage ] && alias nvim='~/downloads/nvim.appimage'
+
 # launch tmux
 tmux
