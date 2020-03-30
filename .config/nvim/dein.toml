@@ -61,3 +61,10 @@ repo = 'w0rp/ale'
 
 [[plugins]]
 repo = 'leafgarland/typescript-vim'
+
+[[plugins]]
+repo = 'rust-lang/rust.vim'
+on_ft= 'rust'
+hook_add = '''
+source ~/dotfiles/.config/nvim/plugins/rust.rc.vim
+'''
