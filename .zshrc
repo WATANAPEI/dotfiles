@@ -95,6 +95,7 @@ alias gp='git push'
 # add cbc(original compiler)
 export PATH=$PATH:/usr/local/cbc/bin
 
+# fzf settings
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 #include current directory into link search path
