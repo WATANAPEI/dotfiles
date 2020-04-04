@@ -24,3 +24,6 @@ pip install -r ~/dotfiles/.requirements_py3.txt
 mkdir -p ~/downloads && cd ~/downloads
 sudo apt-get install uidmap -y
 curl -fsSL https://get.docker.com/rootless | sh
+## docker-compose
+curl -L "https://github.com/docker/compose/releases/download/1.25.4/docker-compose-$(uname -s)-$(uname -m)" -o ~/bin/docker-compose
+chmod +x ~/bin/docker-compose
