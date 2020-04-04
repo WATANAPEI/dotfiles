@@ -109,5 +109,9 @@ function mdc() {
 # find latest neovim
 [ -f ~/downloads/nvim.appimage ] && alias nvim='~/downloads/nvim.appimage'
 
+# add docker settings
+export PATH=~/bin:$PATH
+export DOCKER_HOST=unix:///run/user/1000/docker.sock
+
 # launch tmux
 tmux

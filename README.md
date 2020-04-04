@@ -19,3 +19,8 @@ pip install -r ~/dotfiles/.requirements_py3.txt
 
 ## fzf install
 ~/.fzf/install
+
+## download docker rootless
+mkdir -p ~/downloads && cd ~/downloads
+sudo apt-get install uidmap -y
+curl -fsSL https://get.docker.com/rootless | sh

@@ -13,3 +13,8 @@ BraveSoftware
 mimeapps.list
 monitors.xml
 calibre
+.config/autostart
+.config/freerdp
+.config/remmina
+.config/docker
+.config/systemd
