@@ -113,5 +113,8 @@ function mdc() {
 export PATH=~/bin:$PATH
 export DOCKER_HOST=unix:///run/user/1000/docker.sock
 
+# add llvm path
+export PATH=$PATH:~/src/llvm/llvm-project/build/bin
+
 # launch tmux
 tmux
