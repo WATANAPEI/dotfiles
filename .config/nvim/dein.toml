@@ -68,3 +68,9 @@ on_ft= 'rust'
 hook_add = '''
 source ~/dotfiles/.config/nvim/plugins/rust.rc.vim
 '''
+
+[[plugins]]
+repo = 'junegunn/fzf'
+
+[[plugins]]
+repo = 'junegunn/fzf.vim'
