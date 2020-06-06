@@ -5,17 +5,19 @@ sudo apt upgrade\
 && sudo apt install curl git tmux zsh\
 && git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm\
 && git clone https://github.com/junegunn/fzf.git ~/.fzf
-&& git clone https://github.com/WATANAPEI/dotfiles.git\
+&& git clone https://github.com/WATANAPEI/dotfiles.git
+
+(for mac, use homebrew)
 
 ## download latest neovim image
-mkdir -p ~/downloads && cd ~/downloads
-curl -L https://github.com/neovim/neovim/releases/latest/download/nvim.appimage -o "nvim.appimge"
-chmod u+x nvim.appimage
+mkdir -p ~/downloads && cd ~/downloads  
+curl -L https://github.com/neovim/neovim/releases/latest/download/nvim.appimage -o "nvim.appimage"  
+chmod u+x nvim.appimage  
 
 ## python settings
-sudo apt install python3-pip python-pip
-pip install -r ~/dotfiles/.requirements_py2.txt
-pip install -r ~/dotfiles/.requirements_py3.txt
+sudo apt install python3-pip python-pip  
+pip install -r ~/dotfiles/.requirements_py2.txt  
+pip install -r ~/dotfiles/.requirements_py3.txt  
 
 ## fzf install
 ~/.fzf/install

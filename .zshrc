@@ -3,7 +3,7 @@
 export LANG=ja_JP.UTF-8
 
 ## path setting
-path=(~/bin(N-/) /usr/local/bin(N-/) ${path})
+# path=(~/bin(N-/) /usr/local/bin(N-/) ${path})
 
 # enable color settings
 autoload -Uz colors
@@ -49,7 +49,10 @@ autoload -Uz compinit
 compinit
 # alias
 alias lal='ls -hal | less'
-alias lc='ls -hal --color=auto'
+alias lc='ls -hal -G'
+if [[ `uname -a` =~ Linux && `uname -a` =~ Microsoft ]]; then
+    alias lc='ls -hal --color=auto'
+fi
 
 autoload -Uz add-zsh-hook
 autoload -Uz terminfo
