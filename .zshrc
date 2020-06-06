@@ -116,5 +116,8 @@ export DOCKER_HOST=unix:///run/user/1000/docker.sock
 # add llvm path
 export PATH=$PATH:~/src/llvm/llvm-project/build/bin
 
+# add jdk path
+export PATH=$PATH=~/.jdks/openjdk-14.0.1/bin
+export JAVA_HOME=~/.jdks/openjdk-14.0.1
 # launch tmux
 tmux

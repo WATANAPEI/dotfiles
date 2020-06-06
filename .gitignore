@@ -19,3 +19,5 @@ calibre
 .config/docker
 .config/systemd
 Postman
+.config/*
+!.config/nvim
