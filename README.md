@@ -11,7 +11,7 @@ sudo apt upgrade\
 
 ## download latest neovim image
 mkdir -p ~/downloads && cd ~/downloads  
-curl -L https://github.com/neovim/neovim/releases/latest/download/nvim.appimage -o "nvim.appimge"  
+curl -L https://github.com/neovim/neovim/releases/latest/download/nvim.appimage -o "nvim.appimage"  
 chmod u+x nvim.appimage  
 
 ## python settings
