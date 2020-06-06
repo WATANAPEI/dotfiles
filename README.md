@@ -5,7 +5,9 @@ sudo apt upgrade\
 && sudo apt install curl git tmux zsh\
 && git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm\
 && git clone https://github.com/junegunn/fzf.git ~/.fzf
-&& git clone https://github.com/WATANAPEI/dotfiles.git\
+&& git clone https://github.com/WATANAPEI/dotfiles.git
+
+(for mac, use homebrew)
 
 ## download latest neovim image
 mkdir -p ~/downloads && cd ~/downloads
