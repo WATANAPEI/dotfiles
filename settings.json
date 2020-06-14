@@ -110,5 +110,6 @@
 
     ],
     "explorer.confirmDelete": false,
-    "git.enableSmartCommit": true
+    "git.enableSmartCommit": true,
+    "git.autofetch": true
 }
