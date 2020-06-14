@@ -1,0 +1,79 @@
+// 既定値を上書きするには、このファイル内にキー バインドを挿入します
+// reference: https://qiita.com/koutasan/items/06d34c279ca06c977884
+[
+    //サジェスチョン操作
+    {
+        "key": "crtl+j",
+        "command": "selectNextSuggestion",
+        "when": "sugestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+    },
+    {
+        "key": "crtl+k",
+        "command": "selectPrevSuggestion",
+        "when": "sugestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+    },
+
+    //コマンドパレットの移動
+    {
+        "key": "crtl+j",
+        "command": "workbench.action.quickOpenSelectNext",
+        "when": "inQuickOpen"
+    },
+    {
+        "key": "crtl+k",
+        "command": "workbench.action.quickOpenSelectPrevious",
+        "when": "inQuickOpen"
+    },
+
+
+    // sidebar setting
+    // show sidebar
+    {
+        "key": "ctrl+Space ctrl+Space",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "!explorerViewletVisible && !searchViewletVisible && !inDebugMode && vim.mode != 'SearchInProgressMode' && vim.mode != 'Insert'"
+    },
+    // hide sidebar
+    {
+        "key": "ctrl+Space ctrl+Space",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "explorerViewletVisible && !searchViewletVisible && !inDebugMode && vim.mode != 'SearchInProgressMode' && vim.mode != 'Insert'"
+    },
+
+    {
+        "key": "space l",
+        "command": "workbench.action.focusFirstEditorGroup",
+        "when": "explorerViewletVisible && explorerViewletFocus && !editorFocus && !inQuickOpen"
+    },
+
+    // explorer
+    // show explorer
+
+    /*
+    {
+        "key": "ctrl+Space ctrl+e",
+        "command": "workbench.view.explorer",
+    },
+    {
+        "key": "ctrl+Space e",
+        "command": "workbench.view.explorer",
+    },
+    */
+
+    // grep search
+    /*
+    {
+        "key": "ctrl+space ctrl+f",
+        "command": "workbench.action.findInFiles",
+        "when": "!searchInputBoxFocus"
+    },
+    {
+        "key": "ctrl+space f",
+        "command": "workbench.action.findInFiles",
+        "when": "!searchInputBoxFocus"
+    },
+    */
+
+
+
+]
