@@ -15,7 +15,9 @@ SAVEHIST=1000
 
 # prompt
 # 1 line
-PROMPT="%{${fg[white]}%}[%n@%m]%{${reset_color}%}"
+# PROMPT="%{${fg[white]}%}[%n@%m]%{${reset_color}%}"
+PROMPT="%{${fg[blue]}%}%~%{${reset_color}%}
+> "
 
 # keybind; vim
 bindkey -v
