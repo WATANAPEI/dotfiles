@@ -18,7 +18,7 @@
     "editor.renderControlCharacters": true,
 
     //sugestion
-    "editor.quickSuggestionsDelay": 400,
+    "editor.quickSuggestionsDelay": 50,
     "editor.quickSuggestions": {
         "other": true,
         "comments": false,
@@ -111,5 +111,9 @@
     ],
     "explorer.confirmDelete": false,
     "git.enableSmartCommit": true,
-    "git.autofetch": true
+    "git.autofetch": true,
+    "explorer.confirmDragAndDrop": false,
+    "java.semanticHighlighting.enabled": true,
+    "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -javaagent:\"/home/baystars/.vscode/extensions/gabrielbb.vscode-lombok-1.0.1/server/lombok.jar\"",
+    "python.languageServer": "Microsoft"
 }

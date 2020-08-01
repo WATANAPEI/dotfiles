@@ -45,7 +45,23 @@
         "command": "workbench.action.focusFirstEditorGroup",
         "when": "explorerViewletVisible && explorerViewletFocus && !editorFocus && !inQuickOpen"
     },
-
+    // disable to hide terminal panel
+    {
+        "key": "ctrl+j",
+        "command": "-workbench.action.togglePanel"
+    },
+    // close active editor
+    {
+        "key": "ctrl+w",
+        "command": "workbench.action.closeActiveEditor",
+        "when": "editorIsOpen"
+    },
+    // move editor from terminal
+    {
+        "key": "space k",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "terminalFocus"
+    },
     // explorer
     // show explorer
 
