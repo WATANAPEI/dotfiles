@@ -58,8 +58,25 @@
     },
     // move editor from terminal
     {
-        "key": "space k",
+        "key": "Ctrl+space k",
         "command": "workbench.action.focusActiveEditorGroup",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+y",
+        "command": "references-view.findReferences",
+        "when": "editorHasReferenceProvider"
+    },
+    // move right terminal
+    {
+        "key": "Ctrl+space l",
+        "command": "workbench.action.terminal.focusNextPane",
+        "when": "terminalFocus"
+    },
+    // move left terminal
+    {
+        "key": "Ctrl+space h",
+        "command": "workbench.action.terminal.focusPreviousPane",
         "when": "terminalFocus"
     },
     // explorer
