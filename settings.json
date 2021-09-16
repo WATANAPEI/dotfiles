@@ -114,5 +114,16 @@
     "liveServer.settings.donotShowInfoMsg": true,
     "editor.acceptSuggestionOnCommitCharacter": false,
     "window.zoomLevel": 0,
-    "typescript.updateImportsOnFileMove.enabled": "always"
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "go.useLanguageServer": true,
+    "go.lintOnSave": "off",
+    "remote.autoForwardPorts": false,
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.editor.untitled.hint": "hidden"
 }

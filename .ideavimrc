@@ -1,0 +1,130 @@
+"*****************************************************************************
+"" Basic Setup
+"*****************************************************************************"
+"" Encoding
+set encoding=utf-8
+set fileencoding=utf-8
+set fileencodings=utf-8
+set ttyfast
+
+"" Map leader to ,
+let mapleader="\<Space>"
+
+"" Enable hidden buffers
+set hidden
+
+"*****************************************************************************
+"" Visual Settings
+"*****************************************************************************
+syntax on
+set ruler
+set number
+
+"*****************************************************************************
+"" Mappings
+"*****************************************************************************
+
+"" Split(IntelliJ ver>
+"" -> defined in IntelliJ keyboard shortcut
+
+noremap YY "+y<CR>
+noremap <leader>p "+gP<CR>
+noremap XX "+x<CR>
+
+"" Buffer nav
+noremap <leader>z :bp<CR>
+noremap <leader>q :bp<CR>
+noremap <leader>x :bn<CR>
+noremap <leader>w :bn<CR>
+
+"" Close window
+noremap <leader>c :clo<CR>
+
+"" Clean search (highlight)
+nnoremap <silent> <leader><space> :noh<cr>
+
+"" Switching windows
+noremap <leader>j <C-w>j
+noremap <leader>k <C-w>k
+noremap <leader>l <C-w>l
+noremap <leader>h <C-w>h
+set history=200
+cnoremap <C-p> <Up>
+cnoremap <C-n> <Down>
+
+"" open directory with active file
+"" ref: practical vim TIP 41
+cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
+
+"" escape when ESC key typed twice
+au FileType unite nnoremap <silent> <buffer> <ESC><ESC> q
+au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>q
+
+"" not put into yunk when you type 'x'
+"" ref: https://qiita.com/ykyk1218/items/ab1c89c4eb6a2f90333a
+noremap PP "0p
+noremap x "_x
+
+inoremap <C-e> <Esc>$a
+inoremap <C-a> <Esc>^i
+noremap <C-e> <Esc>$a
+noremap <C-a> <Esc>^i
+
+"" move current dir automatically
+set autochdir
+
+"" python setting for interpolation
+let g:python3_host_prog = '/usr/bin/python3'
+let g:python_host_prog = '/usr/bin/python2'
+
+set laststatus=2
+
+"" default tabspace setting
+set tabstop=4
+set softtabstop=0
+set shiftwidth=4
+set expandtab
+
+"" filetype settings
+autocmd BufRead,BufNewFile *.ts set filetype=typescript
+autocmd BufRead,BufNewFile *.tsx set filetype=typescript
+autocmd BufRead,BufNewFile *.jsx set filetype=javascript
+autocmd BufRead,BufNewFile *.json set filetype=javascript
+autocmd BufRead,BufNewFile *.html.erb set filetype=html
+autocmd FileType html setlocal expandtab sw=2 ts=2 sts=2
+autocmd FileType javascript setlocal expandtab sw=2 ts=2 sts=2
+autocmd FileType typescript setlocal expandtab sw=2 ts=2 sts=2
+autocmd FileType python setlocal expandtab sw=4 ts=4 sts=4
+autocmd FileType ruby setlocal expandtab sw=2 ts=2 sts=2
+autocmd FileType css setlocal expandtab sw=2 ts=2 sts=2
+
+noremap <leader>[ :cprevious<CR>
+noremap <leader>] :cnext<CR>
+
+" open new window automatically when vimgrep, grep
+autocmd QuickFixCmdPost *grep* cwindow
+
+" move corsole during insert mode
+ino <C-l> <Right>
+ino <C-g> <Left>
+
+" type "jj" means ESC
+inoremap jj <ESC>
+
+" add ruby host prog location
+let g:ruby_host_prog = '~/.gem/bin/neovim-ruby-host'
+
+" set command window size
+:set cmdheight=2
+
+" yank shortcut
+vnoremap y : '<,'>y+"
+
+command W : write
+command Q : quit
+
+" clipboard share for ubuntu
+set clipboard+=unnamedplus
+
+" setting for IntelliJ IDEA vim
+inoremap <C-j> <CR>
