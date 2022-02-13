@@ -189,8 +189,8 @@ vmap > >gv
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
-"" Open current line on GitHub
-"" nnoremap <Leader>o :.Gbrowse<CR>
+"" escape
+inoremap jj <ESC>
 
 "*****************************************************************************
 "" Custom configs
