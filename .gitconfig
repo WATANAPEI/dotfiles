@@ -3,7 +3,7 @@
 	email = info@wpei.dev
 	name = WATANAPEI
 [core]
-	editor = nvim
+	editor = vim
 [color]
     status = auto
     diff = auto
@@ -48,10 +48,6 @@
     ds = diff --staged # same above
     d1 = diff HEAD~
     dr = diff master origin/master
-[diff]
-    tool = nvimdiff
-[difftool]
-    prompt = false
-[difftool "nvimdiff"]
-    cmd = "nvim -d -c \"wincmd l\" -d \"$LOCAL\" \"$REMOTE\""
 
+[credential]
+    helper = osxkeychain
