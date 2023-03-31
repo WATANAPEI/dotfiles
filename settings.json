@@ -1,6 +1,4 @@
 {
-    "editor.fontSize": 16,
-    "terminal.integrated.fontSize": 16,
     "editor.wordWrap": "on",
     "files.trimTrailingWhitespace": true,
     "editor.minimap.enabled": false,
@@ -16,7 +14,6 @@
     "editor.insertSpaces": true,
     "editor.tabSize": 4,
     "editor.renderControlCharacters": true,
-
     //sugestion
     "editor.quickSuggestionsDelay": 50,
     "editor.quickSuggestions": {
@@ -27,82 +24,139 @@
     "files.autoGuessEncoding": true,
     "files.autoSave": "off",
     "files.eol": "auto",
-
     "workbench.editor.labelFormat": "medium",
     "workbench.editor.revealIfOpen": true,
     //for issue #80798
     "window.titleBarStyle": "custom",
-
     //keymap for vim
     "vim.normalModeKeyBindingsNonRecursive": [
         {
-            "before": ["<leader>", "h"],
-            "after": ["<C-w>", "h"],
+            "before": [
+                "<leader>",
+                "h"
+            ],
+            "after": [
+                "<C-w>",
+                "h"
+            ],
             "commands": []
         },
         {
-            "before": ["<leader>", "l"],
-            "after": ["<C-w>", "l"],
+            "before": [
+                "<leader>",
+                "l"
+            ],
+            "after": [
+                "<C-w>",
+                "l"
+            ],
             "commands": []
         },
         {
-            "before": ["<leader>", "k"],
-            "after": ["<C-w>", "k"],
+            "before": [
+                "<leader>",
+                "k"
+            ],
+            "after": [
+                "<C-w>",
+                "k"
+            ],
             "commands": []
         },
         {
-            "before": ["<leader>", "j"],
-            "after": ["<C-w>", "j"],
+            "before": [
+                "<leader>",
+                "j"
+            ],
+            "after": [
+                "<C-w>",
+                "j"
+            ],
             "commands": []
         },
         {
-            "before": ["<leader>", "v"],
+            "before": [
+                "<leader>",
+                "v"
+            ],
             "after": [],
             "commands": [
-                { "command" : ":split"}
+                {
+                    "command": ":split"
+                }
             ]
         },
         {
-            "before": ["<leader>", "m"],
+            "before": [
+                "<leader>",
+                "m"
+            ],
             "after": [],
             "commands": [
-                { "command" : ":vsplit"}
+                {
+                    "command": ":vsplit"
+                }
             ]
         },
         {
-            "before": ["<C-e>"],
-            "after": ["<Esc>", "$", "a"]
-
+            "before": [
+                "<C-e>"
+            ],
+            "after": [
+                "<Esc>",
+                "$",
+                "a"
+            ]
         },
         {
-            "before": ["<Leader>", "w"],
-            "after": ["g", "t"]
-
+            "before": [
+                "<Leader>",
+                "w"
+            ],
+            "after": [
+                "g",
+                "t"
+            ]
         },
         {
-            "before": ["<Leader>", "q"],
-            "after": ["g", "T"]
-
+            "before": [
+                "<Leader>",
+                "q"
+            ],
+            "after": [
+                "g",
+                "T"
+            ]
         },
-
     ],
-
     "vim.insertModeKeyBindingsNonRecursive": [
         {
-            "before": ["j", "j"],
-            "after": ["<Esc>"]
+            "before": [
+                "j",
+                "j"
+            ],
+            "after": [
+                "<Esc>"
+            ]
         },
         {
-            "before": ["<C-e>"],
-            "after": ["<Esc>", "$", "a"]
-
+            "before": [
+                "<C-e>"
+            ],
+            "after": [
+                "<Esc>",
+                "$",
+                "a"
+            ]
         },
         {
-            "before": ["<C-j>"],
-            "after": ["Enter"]
-
+            "before": [
+                "<C-j>"
+            ],
+            "after": [
+                "Enter"
+            ]
         },
-
     ],
     "explorer.confirmDelete": false,
     "git.enableSmartCommit": true,
@@ -110,13 +164,16 @@
     "explorer.confirmDragAndDrop": false,
     "java.semanticHighlighting.enabled": true,
     "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -javaagent:\"/home/baystars/.vscode/extensions/gabrielbb.vscode-lombok-1.0.1/server/lombok.jar\"",
-    "python.languageServer": "Microsoft",
+    "python.languageServer": "Default",
     "liveServer.settings.donotShowInfoMsg": true,
     "editor.acceptSuggestionOnCommitCharacter": false,
-    "window.zoomLevel": 0,
+    "window.zoomLevel": -1,
     "typescript.updateImportsOnFileMove.enabled": "always",
     "go.useLanguageServer": true,
     "go.lintOnSave": "off",
+    "go.toolsEnvVars": {
+        "GO111MODULE": "on"
+    },
     "remote.autoForwardPorts": false,
     "files.exclude": {
         "**/.classpath": true,
@@ -125,5 +182,15 @@
         "**/.factorypath": true
     },
     "workbench.startupEditor": "newUntitledFile",
-    "workbench.editor.untitled.hint": "hidden"
+    "workbench.editor.untitled.hint": "hidden",
+    "terminal.integrated.fontFamily": "monospace",
+    "terminal.integrated.fontSize": 13,
+    "go.useCodeSnippetsOnFunctionSuggest": true,
+    "go.useCodeSnippetsOnFunctionSuggestWithoutType": true,
+    "go.autocompleteUnimportedPackages": true,
+    "gopls": {
+        "usePlaceholders": true,
+        "experimentalWorkspaceModule": true
+    },
+    "editor.codeLens": false
 }

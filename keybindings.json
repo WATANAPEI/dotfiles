@@ -1,7 +1,6 @@
-// 既定値を上書きするには、このファイル内にキー バインドを挿入します
-// reference: https://qiita.com/koutasan/items/06d34c279ca06c977884
+// Place your key bindings in this file to override the defaults
 [
-    //サジェスチョン操作
+        //サジェスチョン操作
     {
         "key": "crtl+j",
         "command": "selectNextSuggestion",
@@ -111,6 +110,5 @@
         "command": "editor.action.showHover",
         "when": "editorTextFocus"
     }
-
 
 ]

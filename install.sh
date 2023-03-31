@@ -28,10 +28,10 @@ link(){
     $EVAL ln -snfv $DOT/$1 $HOME/$1
 }
 
-link .vim
-link .vimrc
+# link .vim
+# link .vimrc
 link .zshrc
-link .gitconfig
-link .gitignore
+# link .gitconfig
+# link .gitignore
 echo "finish setup.."
 
